@@ -8,13 +8,10 @@ name: Build
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-  schedule:
-    - cron: "47 3 * * 0"
-
 jobs:
 
   runner:
-    name: Lint
+    name: Runner
     runs-on: ubuntu-latest
     steps:
       - name: Check out the codebase.
@@ -27,9 +24,6 @@ jobs:
 
       - name: Show Ansible version
         run: ansible --version
-
-      - name: Show Ansible lint version
-        run: ansible-lint --version
 
       - name: Show YamlLint version
         run: yamllint --version
