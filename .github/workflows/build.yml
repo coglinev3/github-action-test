@@ -13,7 +13,7 @@ name: Build
 
 jobs:
 
-  lint:
+  runner:
     name: Lint
     runs-on: ubuntu-latest
     steps:
@@ -27,6 +27,12 @@ jobs:
 
       - name: Show Ansible version
         run: ansible --version
+
+      - name: Show Ansible lint version
+        run: ansible-lint --version
+
+      - name: Show YamlLint version
+        run: yamllint --version
 
       - name: Check buildah and podman version
         run: |
