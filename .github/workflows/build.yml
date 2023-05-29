@@ -35,4 +35,12 @@ jobs:
           echo "buildah version"
           buildah version
 
+      - name: Show buildah and podman info
+        run: |
+          echo "podman info"
+          podman info
+          echo
+          echo "buildah info"
+          buildah info
+
 # vim:set nu expandtab ts=2 sw=2 sts=2:
