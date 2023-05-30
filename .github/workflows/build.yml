@@ -25,6 +25,9 @@ jobs:
       - name: Show Python 3 version
         run: python3 --version
 
+      - name: Show Pip 3 version
+        run: pip3 --version
+
       - name: Show Ansible version
         run: ansible --version
 
