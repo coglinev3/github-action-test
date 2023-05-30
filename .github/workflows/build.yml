@@ -34,6 +34,12 @@ jobs:
       - name: Show YamlLint version
         run: yamllint --version
 
+      - name: Show Docker version
+        run: docker --version
+
+      - name: Show Docker Compose version
+        run: docker-compose --version
+
       - name: Check buildah and podman version
         run: |
           echo "podman version"
