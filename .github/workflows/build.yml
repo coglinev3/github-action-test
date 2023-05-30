@@ -31,6 +31,12 @@ jobs:
       - name: Show Ansible version
         run: ansible --version
 
+      - name: Install ansible-lint
+        run: python3 -m pip install --upgrade --user ansible-lint
+
+      - name: Show ansible-lint version
+        run: ansible-lint --version
+
       - name: Show YamlLint version
         run: yamllint --version
 
