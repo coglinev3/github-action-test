@@ -22,6 +22,12 @@ jobs:
 #        with:
 #          python-version: '3.x'
 
+      - name: Configure Ansible
+        run: |
+          mkdir -p ~/.ansible
+          cp .github/ansible.cfg ~/.ansible.cfg
+          cp .github/hosts ~/.ansible/hosts
+
       - name: Show Python 3 version
         run: python3 --version
 
