@@ -41,6 +41,9 @@ jobs:
       - name: Show Ansible version
         run: ansible --version
 
+      - name: Show system setup
+        run: ansible localhost -m setup
+
       - name: Show ansible-lint version
         run: ansible-lint --version
 
